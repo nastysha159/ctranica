@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настя - Студентка НГТУ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Шапка */
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Основные секции */
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Сетка фотографий с подписями */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .photo-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .life-photo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .photo-caption h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .photo-caption p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        /* Кнопка ВК */
+        .vk-button {
+            display: inline-block;
+            background: #4a76a8;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .vk-button:hover {
+            background: #3a6690;
+            transform: scale(1.05);
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header, section {
+                padding: 20px;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка с основной информацией -->
+        <header>
+            <!-- ЗАМЕНИ src на путь к твоей фотографии -->
+            <img src="C:\Users\Интернет\Desktop\js\веб2\мое фото.jpg" alt="Фото Анастасии" class="profile-img">
+            <h1>Анастасия Одияк</h1>
+            <p class="subtitle">Студентка НГТУ, 3 курс</p>
+            <p class="subtitle">Факультет прикладной математики и информатики</p>
+            <p>19 лет</p>
+            
+            <!-- ЗАМЕНИ href на свою ссылку ВКонтакте -->
+            <a href="https://vk.com/xipeix" class="vk-button" target="_blank">
+                Мой ВКонтакте
+            </a>
+        </header>
+
+        <!-- Секция "Обо мне" -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут Настя, мне 19 лет. Я учусь в НГТУ на факультете прикладной математики и информатики на третьем курсе.</p>
+            <p>Увлекаюсь программированием, математикой и всем, что связано с технологиями. В свободное время люблю фотографировать, путешествовать и проводить время с друзьями.</p>
+        </section>
+
+        <!-- Секция "Мои фото" -->
+        <section id="photos">
+            <h2>Фото из моей жизни</h2>
+            <div class="photo-grid">
+                <!-- Фото 1 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="photo1.jpg" alt="Мое фото 1" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Учеба в университете</h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Фото 2 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="C:\Users\Интернет\Desktop\js\веб2\новат.jpg" alt="Мое фото 2" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Прогулка по городу</h3>
+                        <p>Люблю исследовать красивые места в нашем городе.</p>
+                    </div>
+                </div>
+
+                <!-- Фото 3 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="C:\Users\Интернет\Desktop\js\веб2\физика.jpg" alt="Мое фото 3" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Немножко побаловались на лабах по физике</h3>
+                        <p>Этот прибор видел такие сигналы, которые в методичке и не снились</p>
+                    </div>
+                </div>
+
+                <!-- Фото 4 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="C:\Users\Интернет\Desktop\js\веб2\грибы.jpg" alt="Мое фото 4" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Тихая охота - моя страсть</h3>
+                        <p>Мои выходные: выслеживание боровиков</p>
+                    </div>
+                </div>
+
+                <!-- Фото 5 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="C:\Users\Интернет\Desktop\js\веб2\пицца.jpg" alt="Мое фото 5" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Главный пиццамейкер</h3>
+                        <p>Моя кухня превращается в пиццерию каждые выходные</p>
+                    </div>
+                </div>
+
+                <!-- Фото 6 - ЗАМЕНИ src и подпись -->
+                <div class="photo-item">
+                    <img src="C:\Users\Интернет\Desktop\js\веб2\каланхоэ.jpg" alt="Мое фото 6" class="life-photo">
+                    <div class="photo-caption">
+                        <h3>Обожаю выращивать цветы!</h3>
+                        <p>Каждый листик - это маленькая история любви и заботы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Учеба" -->
+        <section id="study">
+            <h2>Моя учеба</h2>
+            <p>На факультете прикладной математики и информатики изучаю:</p>
+            <ul>
+                <li>Программирование (C++, Python, Java)</li>
+                <li>Математический анализ и алгебру</li>
+                <li>Базы данных и алгоритмы</li>
+                <li></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Анастасия и Вероника. Студентки НГТУ</p>
+    </footer>
+</body>
+</html>
